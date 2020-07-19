@@ -8,7 +8,7 @@
         Title="Giris" Height="450" Width="800" >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop     Color="Black" Offset="0"/>
             <GradientStop Color="#FF5E8F8D" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
