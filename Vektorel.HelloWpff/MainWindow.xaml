@@ -1,0 +1,23 @@
+﻿<Window x:Class="Vektorel.HelloWpff.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vektorel.HelloWpff"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid  Name="grdMain"  >
+
+        <Button Name="btn2" Content="Button" HorizontalAlignment="Left" Margin="147,139,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="btn3" Content="Kemalin butonu" HorizontalAlignment="Left" Margin="514,173,0,0" VerticalAlignment="Top" Width="138" Background="#FFCD1818" Height="48" MouseMove="btn3_MouseMove" Click="btn3_Click_1"/>
+        <Button Margin="60,51,649,329" Background="#FF4A69BD">
+            <Button.Content>
+                helloll
+            </Button.Content>
+        </Button>
+        <Label  Name="lblDeneme" Content="Label" HorizontalAlignment="Left" Margin="359,90,0,0" VerticalAlignment="Top" Width="186"/>
+
+
+    </Grid>
+
+</Window>

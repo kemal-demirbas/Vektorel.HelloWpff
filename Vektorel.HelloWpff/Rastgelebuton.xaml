@@ -1,0 +1,19 @@
+﻿<Window x:Class="Vektorel.HelloWpff.Rastgelebuton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vektorel.HelloWpff"
+        mc:Ignorable="d"
+        Title="Rastgelebuton" Height="450" Width="800">
+    <Grid Name="grd" >
+
+        <WrapPanel Name="wrp" Orientation="Horizontal">
+            
+        </WrapPanel>
+        <StackPanel Name="stk">
+            <Button Content="SONUC" VerticalAlignment="Bottom" Click="Button_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

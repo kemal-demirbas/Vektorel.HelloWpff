@@ -1,0 +1,22 @@
+﻿<Window x:Class="Vektorel.HelloWpff.Events"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vektorel.HelloWpff"
+        mc:Ignorable="d"
+        Title="Events" Height="450" Width="800">
+    <Grid Name="grd">
+        <Button Name="btn1" Content="button1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="307,72,0,0" Click="Msg" Height="25" RenderTransformOrigin="0.5,0.5" Tag="1" >
+
+        </Button>
+        <Button  Name="btn2" Content="buton2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="307,124,0,0" Click="Msg" Height="22" RenderTransformOrigin="0.5,0.5" Tag="1" >
+
+        </Button>
+        <Button Name="btn3" Content="buton3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="307,193,0,0" Click="Msg" Height="21" Tag="1" />
+        <Button Name="btnsonuc"  Content="Sonuç" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Margin="254,268,0,0" Click="Msg"
+               />
+        <Button Content="Button4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="63,82,0,0" Tag="1"  />
+
+    </Grid>
+</Window>

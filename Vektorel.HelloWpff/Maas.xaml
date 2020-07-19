@@ -1,0 +1,15 @@
+﻿<Window x:Class="Vektorel.HelloWpff.Maas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vektorel.HelloWpff"
+        mc:Ignorable="d"
+        Title="Maas" Height="450" Width="800">
+    <Grid x:Name="grdIcerik">
+        <Label Content="Maaşınızın Artmasını İstetmisiniz ?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,88,0,0" Width="209"/>
+        <Button Name="Maaskac" Content="EVET" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="247,144,0,0" MouseMove="Button_MouseMove" />
+        <Button Content="HAYIR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="426,144,0,0" Click="Button_Click" />
+
+    </Grid>
+</Window>
