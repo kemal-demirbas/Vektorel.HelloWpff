@@ -36,6 +36,7 @@ namespace Vektorel.HelloWpff
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += Timer_Tick;
             timer.Start();
+            //geriye doğru sayan saat yapıldı
 
 
         }
