@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vektorel.HelloWpff"
         mc:Ignorable="d"
-        Title="Giris" Height="450" Width="800" >
+        Title="Giris" Height="400" Width="400" >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop     Color="Black" Offset="0"/>
-            <GradientStop Color="#FF5E8F8D" Offset="1"/>
+            <GradientStop     Color="#FF222F4B"/>
+            <GradientStop Color="#FF1CECE3"/>
+            <GradientStop Color="#FF1CECE3" Offset="0.442"/>
+            <GradientStop Color="#FF1CECE3" Offset="0.366"/>
+            <GradientStop Color="#FF080D2C" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
     <Grid  HorizontalAlignment="Center" VerticalAlignment="Center">

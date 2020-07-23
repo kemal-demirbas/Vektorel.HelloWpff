@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="KacanButon" Height="450" Width="800">
     <Grid Name="grd">
+
         <Button Name="btnkacan" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Margin="304,272,0,0" Height="39" MouseMove="Button_MouseMove" Grid.Column="0"/>
 
         <Rectangle  Grid.Column="1">
+
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -17,14 +19,25 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Name="lbl2" Grid.Column="1" Panel.ZIndex="2" Foreground="White" HorizontalAlignment="Left"  >
-            <Label Content="Label"/>
-        </Label>
-        <Label Name="lbl3" Content="10" Grid.Column="1" Foreground="White" VerticalAlignment="Bottom"></Label>
-        <Label Name="lbl" Content="Label" Foreground="White" Grid.Column="1" FontSize="18" Opacity="0.75" Margin="0,36,136,334"/>
+
+        <Label Name="lbl3" Content="10" Grid.Column="1"  Foreground="White" VerticalAlignment="Bottom"></Label>
+
+        <Grid Grid.Column="1" ShowGridLines="True" Panel.ZIndex="3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" ></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Label Name="lbl2" Content="adsoyad" Grid.Column="1" Grid.Row="0"  Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="2" />
+
+            <Label Name="lbl" Content="puan" Foreground="White" Grid.Column="1" Grid.Row="1" FontSize="18" Opacity="0.75" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="2" />
+
+        </Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*"></ColumnDefinition>
             <ColumnDefinition Width="0.25*"></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
     </Grid>
 </Window>
