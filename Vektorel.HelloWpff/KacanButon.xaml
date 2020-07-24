@@ -20,18 +20,20 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Label Name="lbl3" Content="10" Grid.Column="1"  Foreground="White" VerticalAlignment="Bottom"></Label>
+       
 
         <Grid Grid.Column="1" ShowGridLines="True" Panel.ZIndex="3">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" ></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
 
             </Grid.RowDefinitions>
             <Label Name="lbl2" Content="adsoyad" Grid.Column="1" Grid.Row="0"  Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="2" />
 
             <Label Name="lbl" Content="puan" Foreground="White" Grid.Column="1" Grid.Row="1" FontSize="18" Opacity="0.75" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="2" />
+            <Label Name="lbl3" Content="10" Grid.Row="2"  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
 
         </Grid>
         <Grid.ColumnDefinitions>
