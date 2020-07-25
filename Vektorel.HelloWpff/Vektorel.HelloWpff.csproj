@@ -60,6 +60,7 @@
     <Compile Include="KacanButon.xaml.cs">
       <DependentUpon>KacanButon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Oyuncu.cs" />
     <Compile Include="Rastgelebuton.xaml.cs">
       <DependentUpon>Rastgelebuton.xaml</DependentUpon>
     </Compile>

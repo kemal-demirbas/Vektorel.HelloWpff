@@ -26,7 +26,11 @@ namespace Vektorel.HelloWpff
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            KacanButon k = new KacanButon(txtad.Text,txtsoyad.Text);
+            //Oyuncu oyn = new Oyuncu();
+            //oyn.ad = txtad.Text;
+            //oyn.soyad = txtsoyad.Text;
+
+            KacanButon k = new KacanButon(new Oyuncu {ad=txtad.Text,soyad=txtsoyad.Text });
             k.Show();
 
         }

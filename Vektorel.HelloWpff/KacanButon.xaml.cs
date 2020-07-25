@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -23,19 +24,21 @@ namespace Vektorel.HelloWpff
     {
         DispatcherTimer timer = new DispatcherTimer();
         int puan;
-        int sayi = 10;
+        int sayi = 5;
+        Oyuncu o;
+
         public KacanButon()
         {
             InitializeComponent();
+            OyunuBaslat();
         }
-        public KacanButon(string ad, string soyad)
+        public KacanButon(Oyuncu o)
         {
             InitializeComponent();
-            lbl2.Content = $"Hoşgeldiniz  {ad}  {soyad}";
-
-            timer.Interval = new TimeSpan(0, 0, 1);
+            this.o = o;
+            lbl2.Content = $"Hoşgeldiniz  {o.ad}  {o.soyad}";
             timer.Tick += Timer_Tick;
-            timer.Start();
+            OyunuBaslat();
             //geriye doğru sayan saat yapıldı
 
 
@@ -45,17 +48,43 @@ namespace Vektorel.HelloWpff
         {
             if (sayi == 0)
             {
+                SkorKaydet(puan, DateTime.Now, o);
                 timer.Stop();
                 btnkacan.Visibility = Visibility.Hidden;
-                MessageBox.Show($"oyun bitti\npuanınız:{puan}");
+                MessageBoxResult cevap = MessageBox.Show($"oyun bitti\npuanınız:{puan}\nYeniden başlamak istermisiniz?", "Game Over", MessageBoxButton.YesNo);
+                if (cevap == MessageBoxResult.Yes)
+                {
+
+                    OyunuBaslat();
+
+                }
+                else
+                {
+                    MessageBox.Show("oyun bitti");
+                    //this.Close();
+                    Application.Current.Shutdown();
+                }
             }
             else
             {
-                sayi--;
                 lbl3.Content = sayi;
-                
+                sayi--;
             }
 
+        }
+
+        public void OyunuBaslat()
+        {
+            sayi = 5;
+            puan = 0;
+            lbl.Content = puan;
+            timer.Interval = new TimeSpan(0, 0, 1);
+
+            timer.Start();
+            btnkacan.Visibility = Visibility.Visible;
+            this.WindowState = WindowState.Maximized;
+
+            timer.Start();
         }
 
         private void Button_MouseMove(object sender, MouseEventArgs e)
@@ -66,22 +95,16 @@ namespace Vektorel.HelloWpff
             btnkacan.Margin = new Thickness(sol, top, 0, 0);
 
             Button btn = (Button)sender;
-
-            //if (btn.Margin.Left - btnkacan.Margin.Left > 50)
-            //{
-            //    puan += 10;
-            //}
-
-            //else
-            //{
-            //    puan++;
-            //}
-
             puan++;
 
             //btnkacan.Content = puan;
             lbl.Content = puan;
 
+        }
+
+        void SkorKaydet(int puan, DateTime tarih, Oyuncu o)
+        {
+            File.AppendAllText((@"D:\Skorlar.txt"), $"{o.ad} {o.soyad} isimli  oyuncu {tarih} tarihinde {puan} puan aldı.\r\n");
         }
     }
 }
